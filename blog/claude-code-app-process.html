@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Building an app with Claude Code, without being a coder | Aethics Deacon Nodes</title>
+<meta name="description" content="The basic structure and process I now follow to build apps with Claude Code as a non-coder, and how I keep the token bill reasonable.">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a href="/">&larr; Aethics Deacon Nodes</a><a href="/blog/">Journal</a></nav>
+<h1>Building an app with Claude Code, without being a coder</h1>
+<div class="meta">9 OCTOBER 2026 &middot; K. THANGAMANI PRABU &middot; PART 1 OF 2</div>
+
+<p>I have been building with Claude Code for some months now, and I will say it plainly: I spent more than I should have. Most of what I followed came from social media posts and short videos, each one promising a single trick that makes the agent build a full app in one go. It does not work like that, at least not for me. I paid for the confusion in tokens.</p>
+<p>This post is what I do now. Nothing in it is clever. It is a small set of habits, and almost every one of them I later found written in Anthropic's own documentation, which I should have read first.<sup id="r1"><a href="#f1">[1]</a></sup> I am not a programmer, so I have tried to write this for someone like me, with every technical word explained.</p>
+
+<h2>The idea I build with: screens, slices, agents</h2>
+<p>A <b>screen</b> is what you see in the app, for example a main screen or a settings window. A <b>slice</b> is one small piece of a screen that I can test by clicking, like "the Save button stores the entry". <b>Wiring</b> is the connection between them: which button opens which pop-up. <b>Agents</b> are the helpers that do the work, and I keep only three: a planner that makes the plan before any code, a builder that builds one slice, and a tester that checks it afterwards.</p>
+<p>Claude Code supports this directly. A subagent is just a markdown file inside <code>.claude/agents/</code> with a name, a description and, if you want, the model it should use.<sup id="r3"><a href="#f3">[3]</a></sup> That model line is where the saving is. I put the planner on a stronger model, the builder on Sonnet and the tester on Haiku, because checking is cheaper work than planning.<sup id="r6"><a href="#f6">[6]</a></sup></p>
+<p>Why not ten agents? I tried that also. More agents meant more tokens and more places for things to go wrong. Anthropic's note on building agents says the same thing: start with simple patterns and add complexity only when it clearly helps.<sup id="r10"><a href="#f10">[10]</a></sup></p>
+
+<h2>Set up the folder before touching Claude</h2>
+<ol>
+<li>Make a folder for the app, say <code>my-new-app</code>.</li>
+<li>Inside it make a folder called <code>research</code> and put all your notes, screenshots and reference files there.</li>
+<li>Open a terminal in <code>my-new-app</code> and type <code>claude</code>.</li>
+<li>Press <b>Shift+Tab</b> until the bottom line says plan mode. In plan mode Claude reads and proposes, but it does not edit anything until you approve.<sup id="r7"><a href="#f7">[7]</a></sup></li>
+</ol>
+
+<h2>The first prompt: documents only, no code</h2>
+<p>My first session never writes code. It only creates the documents that will guide every later session. This is the shortened version of what I paste:</p>
+<pre><code>I am a non-technical founder. In this session do not write any app code.
+We are only setting up documents.
+
+The app idea: [one paragraph in plain words]
+
+1. Read my notes in research/ (read-only, never edit them). Create
+   research/INDEX.md with one line per file, and research/SUMMARY.md with
+   a section "Contradictions and gaps".
+2. Create PRODUCT.md, STATUS.md, AGENTS.md, docs/SPEC.md, docs/PLAN.md,
+   docs/COSTS.md. Make CLAUDE.md contain only one line: @AGENTS.md
+3. In PRODUCT.md: what the app is, who it is for, top 5 features, what it
+   must never do, what "done" means for version 1 as a checklist I can
+   click, what is not in version 1, open questions.
+4. In docs/PLAN.md: 6 to 10 thin slices, each testable by me by clicking.
+   First slices use fake data, so no money is spent until the app works.
+5. In docs/COSTS.md: estimate the AI cost of one job. Show the maths step
+   by step and mark the assumptions.
+
+Finish by showing me PRODUCT.md, the open questions, the cost estimate and
+the slice plan. Then stop and wait for my approval.</code></pre>
+<p>About <code>CLAUDE.md</code>: Claude Code loads it at the start of every session, so everything in it costs tokens every time. The docs suggest keeping it under about 200 lines.<sup id="r2"><a href="#f2">[2]</a></sup><sup id="r6"><a href="#f6">[6]</a></sup> Mine contains one line that imports a second file, <code>AGENTS.md</code>, where the real rules sit. The memory page describes this import method for people who share one rules file across tools.<sup id="r2"><a href="#f2">[2]</a></sup> You can also run <code>/init</code> and let Claude write a starter <code>CLAUDE.md</code> by scanning the project.<sup id="r8"><a href="#f8">[8]</a></sup></p>
+<p>Read what comes back, edit <code>PRODUCT.md</code> yourself, and answer the open questions. That file is yours. Do not let the agent decide what your product is.</p>
+
+<h2>After that, every slice is a fresh start</h2>
+<ol>
+<li>Type <code>/clear</code>. It starts a new conversation with empty context. Your files keep the memory, the chat does not need to.<sup id="r8"><a href="#f8">[8]</a></sup></li>
+<li>Paste the slice prompt (below).</li>
+<li>Read the short plan Claude shows and approve it.</li>
+<li>Let it build only that slice.</li>
+<li>Ask: "Run the checks for this slice and tell me pass or fail."</li>
+<li>Click through it yourself, the way a user would.</li>
+<li>Type <code>/usage</code> and note the cost. (<code>/cost</code> is the same command under another name.)<sup id="r8"><a href="#f8">[8]</a></sup></li>
+</ol>
+<pre><code>Start Slice [N]: [name from docs/PLAN.md].
+Read AGENTS.md, PRODUCT.md, STATUS.md and the part of docs/SPEC.md for
+this slice. Show a short plan: what you will build, which agent does it,
+how I will test it by clicking, and the risks. Wait for my approval.
+Build only this slice. Run the app and tests and show me the results.
+Update STATUS.md. Then tell me in plain English what I should click.</code></pre>
+<p>The rule that saved me most money is simple: never trust the word "done". Claude can say it with full confidence while nothing works. Anthropic's best-practices page says giving Claude a way to check its own work, like tests or a screenshot, is the single best thing you can do.<sup id="r1"><a href="#f1">[1]</a></sup> Since I cannot read the code, I ask for the test results and for what to click.</p>
+
+<h2>Keeping the bill reasonable</h2>
+<p>These are the habits that made a real difference, and most of them match the cost page in the docs.<sup id="r6"><a href="#f6">[6]</a></sup></p>
+<ul>
+<li><b>Sonnet by default.</b> Opus only for hard planning, and I justify it to myself before switching. Haiku for simple subagent jobs.<sup id="r6"><a href="#f6">[6]</a></sup><sup id="r9"><a href="#f9">[9]</a></sup></li>
+<li><b>Short sessions.</b> One slice, then <code>/clear</code>. If a session must run long, <code>/compact</code> with a focus line, for example "focus on the next slice", and check <code>/context</code> to see how full it is.<sup id="r8"><a href="#f8">[8]</a></sup></li>
+<li><b>Thin slices with fake data first.</b> I do not connect any paid service until the app already works with dummy data.</li>
+<li><b>Predict before you spend.</b> After slice 1, I look at <code>/usage</code> and multiply by the number of slices left. If that number is scary, I know it in week one, not in week six.</li>
+<li><b>Few MCP servers.</b> Every connected tool adds to what Claude carries. Where a command-line tool such as <code>gh</code> does the same job, I use that instead.<sup id="r6"><a href="#f6">[6]</a></sup></li>
+<li><b>Ideas go to a parking file.</b> When I think of a new feature mid-slice, I say "add to docs/IDEAS.md, do not build it". Building it right then is how a slice becomes three.</li>
+</ul>
+<p>For overnight work there is <code>/schedule</code>, which runs routines on Anthropic's cloud. It is a research preview, it counts against subscription usage, and there are hourly limits, so I have not started using it yet.<sup id="r11"><a href="#f11">[11]</a></sup></p>
+
+<h2>What I stopped doing</h2>
+<p>I stopped writing one giant prompt and hoping. I use to think a bigger prompt gives a better result, but it only gave me bigger mistakes to correct. I stopped keeping a long <code>CLAUDE.md</code>, because the docs warn that a bloated one makes Claude ignore parts of it.<sup id="r1"><a href="#f1">[1]</a></sup> And I stopped relying on a "dreaming" memory feature I had read about online. I could not find it in the Claude Code documentation, so I left it out. Every five slices I do something plainer: I ask Claude to read my notes from the last five slices and propose up to five new one-line rules, and I approve them myself.</p>
+
+<h2>Where this goes next</h2>
+<p>This basic structure is enough for the first few slices. When the project grows, a few more files help a lot. That is the second part: <a href="claude-code-folder-structure.html">a sturdier folder structure for Claude Code projects</a>.</p>
+<p><i>A note on how I wrote this: I worked these methods out in conversations with Claude models and then checked each claim against the official documents listed below. Where I could not find support, I left the claim out.</i></p>
+
+<ol class="fn">
+<li value="1" id="f1">Anthropic, "Best practices for Claude Code". <a href="https://code.claude.com/docs/en/best-practices">code.claude.com/docs/en/best-practices</a> <a href="#r1">&uarr;</a></li>
+<li value="2" id="f2">Anthropic, "How Claude remembers your project" (CLAUDE.md, imports, AGENTS.md). <a href="https://code.claude.com/docs/en/memory">code.claude.com/docs/en/memory</a> <a href="#r2">&uarr;</a></li>
+<li value="3" id="f3">Anthropic, "Subagents". <a href="https://code.claude.com/docs/en/sub-agents">code.claude.com/docs/en/sub-agents</a> <a href="#r3">&uarr;</a></li>
+<li value="6" id="f6">Anthropic, "Manage costs effectively". <a href="https://code.claude.com/docs/en/costs">code.claude.com/docs/en/costs</a> <a href="#r6">&uarr;</a></li>
+<li value="7" id="f7">Anthropic, "Common workflows" (plan mode). <a href="https://code.claude.com/docs/en/common-workflows">code.claude.com/docs/en/common-workflows</a> <a href="#r7">&uarr;</a></li>
+<li value="8" id="f8">Anthropic, "Commands" (/init, /clear, /compact, /context, /usage). <a href="https://code.claude.com/docs/en/commands">code.claude.com/docs/en/commands</a> <a href="#r8">&uarr;</a></li>
+<li value="9" id="f9">Anthropic, "Model configuration". <a href="https://code.claude.com/docs/en/model-config">code.claude.com/docs/en/model-config</a> <a href="#r9">&uarr;</a></li>
+<li value="10" id="f10">Anthropic, "Building effective agents". <a href="https://www.anthropic.com/engineering/building-effective-agents">anthropic.com/engineering/building-effective-agents</a> <a href="#r10">&uarr;</a></li>
+<li value="11" id="f11">Anthropic, "Automate work with routines". <a href="https://code.claude.com/docs/en/routines">code.claude.com/docs/en/routines</a> <a href="#r11">&uarr;</a></li>
+</ol>
+
+<footer class="site">Aethics Deacon Nodes &middot; Chennai &middot; <a href="/">adnodes.in</a> &middot; <a href="https://www.linkedin.com/in/thangamani-prabu/">LinkedIn</a></footer>
+</div>
+</body>
+</html>
