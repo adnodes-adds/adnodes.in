@@ -1,0 +1,28 @@
+:root{--bg:#f5f2ed;--bg2:#ede9e2;--fg:#1a1714;--fg2:#4a4540;--fg3:#8a8077;--accent:#c4500a;--line:rgba(196,80,10,.18);--card:#eae6df;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#111009;--bg2:#1a1814;--fg:#f0ece5;--fg2:#c9c2b7;--fg3:#8f877c;--accent:#e8853d;--line:rgba(232,133,61,.22);--card:#1d1b16;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 Inter,system-ui,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 80px}
+nav.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0 20px;border-bottom:1px solid var(--line);font:13px 'Space Mono',monospace}
+nav.top a{color:var(--fg2);text-decoration:none}
+nav.top a:hover{color:var(--accent)}
+h1{font:400 clamp(30px,6vw,44px)/1.15 'DM Serif Display',Georgia,serif;margin:36px 0 8px;color:var(--fg)}
+h2{font:400 26px/1.25 'DM Serif Display',Georgia,serif;margin:44px 0 8px;color:var(--fg)}
+h3{font:600 17px/1.4 Inter,sans-serif;margin:28px 0 6px;color:var(--fg)}
+.meta{color:var(--fg3);font:12px 'Space Mono',monospace;letter-spacing:.04em;margin-bottom:28px}
+p{margin:0 0 16px;color:var(--fg2)}
+a{color:var(--accent)}
+code{font:14px 'Space Mono',monospace;background:var(--card);padding:1px 6px;border-radius:4px;color:var(--fg)}
+pre{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;font:13px/1.55 'Space Mono',monospace;color:var(--fg);white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0}
+ul,ol{color:var(--fg2);padding-left:22px}
+li{margin-bottom:6px}
+blockquote{margin:20px 0;padding:4px 18px;border-left:3px solid var(--accent)}
+sup a{text-decoration:none;font-size:.75em}
+.fn{border-top:1px solid var(--line);margin-top:48px;padding-top:12px;font-size:14px}
+.fn li{word-break:break-word}
+.card{display:block;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:18px 20px;margin:0 0 16px;text-decoration:none}
+.card:hover{border-color:var(--accent)}
+.card h2{margin:0 0 6px;font-size:22px}
+.card p{margin:0}
+footer.site{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);color:var(--fg3);font:12px 'Space Mono',monospace}
