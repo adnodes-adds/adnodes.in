@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A sturdier folder structure for Claude Code projects | Aethics Deacon Nodes</title>
+<meta name="description" content="What goes where in a Claude Code project, and why the folder itself works as an instruction. Part 2 of my notes for non-technical builders.">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAI00lEQVR42r2Xa4xU5RnHf897zlzOzA47s7NXEHBhdcFyc9tQdr2BrohCsWjatPXSpFpLtNZo2g9tjB+wph8KWmskaGs1LY1tlYYSVC7FW2LBFhBlKbuCIgLSRa479zmXpx92Zt3lorZpepKTyXw47///Pu///T//Rzj3I4ABfID6+lhL4PrzAjFXAzNQxohQA6BKFuEQsMNosNGErHVHj+YPV9axgADQc4Gc7TGVj0il4lNU9W4h+KqINFYAz864spqqHlHMahF57MSJXM/pa34WAQvwWyBWSjpLFH4gIiEdRA1EREXEyCBa9XutAAeqKqpqRARVdQV+GTlZeOAw5KtrfxoBC/DTiXB7YFnPisjFFWDPGGMB4rou5XIZzx+EFfmkIpYFkUiYcCisgQa+qtoVIm8Z3//msUy573QScjp4bW2sw4iuE5EGVXVFxBYRyefz+L5SX19Ha2sr48eNo6GhgWg0iuu6HD9+nP3797Nn7176+48SidhEo1H1fd+rVPDjQGXeqVP57cNJyPDzSSTCF9iW9YYIDUGAZ1nGLpfLlF2Xi6dPZ8H8+XR1djJu7FjCkQhBEOD7PsYYLMvCdV0+PHCATZs28afnnuOD/QdIJOIEQeCJYKvysef7l2Qy5T1VTKmq/bzzCOcyzptiZGqg6tmWsXO5PPX1Ddy5+Htcv3AhjuOwu7eX7du30/fuu/T391MqlbBDIdJ1dVw0eTJdXV1Mbm/ngw8/ZNnDD/PSuvXU1FRJiK2B7ownCl8+eJByVZQWQDLpLK1LxTSVdMrpurg6UdEZ0ybpC2ue0wP7evXZlU/pdfPmaEN9QsMhNGSj4TAajaCRMBoODf62NKf0jttv0W1vvq67d27Vr924QMMhtD4d11TSKdelYppMOkuHHTuSrglPSiUdN5V0vLpULKiJh/SCtrH613V/0T29b+sP77tLa0dFNRxCk7VRrU/XaH26RtN1cU3XxbU+XaO1oyJaE7c15hgV0KuvulS3bnlN//63V3T6tHaNOZam6+JBKul4qaTjpmvCkwCxACKx0M+MmC9Vrpnluh73/+THdHV28vjy5Tzyi+U4TgjHiaKqI16AYrFEW1sbP12yhFMDAxw5cpi+d/ehgce8efMI2TabXn6FcDgkqhqIiB0YosWit8Y0xeONAjeqKsYYK58vMGPGdLqvvJItW7bw6988TW2tg4jg+/6ZjmUMxaLHFzs6mH/ddVza1UWxWCZZG2PN2rX09vZy+WWX0Xr+eIqlIiJiqSoCNzbF442maHvzRSRV2b14njJr5kxqEgleePFFcrkitm0P7XbQ8QTLsjDGVG6Awfd9MpkMruuigG3bHDt+kjc2b6a5uZmp06ZRLvkYY6SClSra3nxbxFxTcTJVVWwbxo8fT75QoG/PHkIhIQiCETsul8sUCi6WBbZtUXaDIVIiMsLlenp6UFXaL7xweOEUUBFzjQ3MGKwIpnIMRKNRfM+jXCqNWNAYQzabo6W5idmzZzN50iSaGhv58+rVlEoljDFDDUFVsSzh4KFD5PN5WlpasG2pVtJUMGfYKGMqdiRD1M7SuowxZHM5ru6+ivvuvZe2iRMplUrE43EOHDpIT8+uM/VhWWQyGfL5PMnaWkKhULWaFZaMsUWIn94cpNLydBh4JpOla9YsHnrwQSzL4ulnnuGVV1/D9Vx27drN9QsXDB1VtWpGhEKhQD6fJxwKDVZoZPeM23xGIAAIgoBINMJ3b7uNeDzOz5ct44lf/ZZoZFBsuZyHbVmDpIMAz1NEBGMGxRmLxUgkEmfFsFXJVYMFn6hxhOKLxSKTJ0/iC1OmsHv3bp5ftYpkbRTbtjHGUCplho7Nsm1GJWJks9khwT6/ahWWZZ0BrkrOriSZ9sr3cmbIEDzfpy5VR8xx+OjwYUqlEpFIZIQviAie55FKJnlyxXL2vvceK554gqPHjvHIo48iIkSj0eH7FIRDBtghglY703D5DWlAhGw2S6lUorGxcUhMtm1jWQbPU0a3tGCM4V/9/UQjEb598808snQpDel6otEo8fgIqQUVzB1GNVg/pD0RAl/J5XKEw2ESNTX4vk8kEuG9999n3759TGpv54ZFizh5ssDAQIb+IwN0dFxEd3c3mUyGDRs38P177mXjpk10dHRw6623kM8XzyYvUQ3WW0k7+pFvgttBYsYYLRTKMmHC+cy54gr+2dvLtm1vk0jEOXHiFK5b5so5c5gxfTqtreNI19XRfdVs7r7rLiZMnMjvVq5kzZq1DAxk6Ovr5SsLFjChtZV169eRzWarOtDBLKAnIp59j5Vz3Vw0arcZMR2q+EHgG9d1uWbuXFKpFBs2rsfzPBwnSk/PLrLZLNOnTaNz1izmdnfT2dkJwMqVK3ns8cexbZtoNMKpU6fYs3cvb7/zDh/s3/+JUYEvIkbR3x/LFP4glXbcHtjWTkCMEZPPF+WhB5dww6JFLF+xgmUPP0Y8HiYSiZDNZmmbOJGZM2fS1NjIiZMn2bp1K//Y1sOoURGCwCdkhwDI5wv4PsTjkSq4ViO68fypx7LlvjMCSV0qVq6Jh7Rt4nm64aXVumf3Dn3g/h/pmNFpDdmoExW1rRGGqYDO7b5M167+o37j69drJCwjskIq6VTfMwJJ9XJa9fXe6+WSvVCEFtu2vePHT5jtb21nypQpLLj2Wq64/HKamhqJhMMkEnEaGlK0to7lkq6ZLL7jO9y5eDHNzc28/Oqr9Pb2EQ4P3pRhnuKJENKAnTWJwrcGBobfvNNCKdBgjPHy+YKdSiW5+aabWDB/PuPHjUNVKRQK+L5PKBTCcRyKxSLbtm3jyaeeYvPmLcRizggzq4CfM5SeI5bTIGJc13XtQqEso0c3MW3qVNrb26lPp7Esi2KpxKGDB9nZ00PPrl0USyVq4jGCQIdbyeeK5eccTCou55XLZatYckUDqPYU1cHXtsFxHIwx1YakFYD/aDD51NGsQiQQEVVVU/lfaZyqFeCgGvP/29Hscw2n6NlH3f/VcPp/Hc//DS1TaAAUPtIlAAAAAElFTkSuQmCC">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a href="/">&larr; Aethics Deacon Nodes</a><a href="/blog/">Journal</a></nav>
+<h1>A sturdier folder structure for Claude Code projects</h1>
+<div class="meta">9 OCTOBER 2026 &middot; K. THANGAMANI PRABU &middot; PART 2 OF 2</div>
+
+<p>In <a href="claude-code-app-process.html">part one</a> I described the basic process: screens, slices, three agents, and a fresh session for every slice. That is enough to start. But around the fourth or fifth slice I began to feel the cracks. Claude would change behaviour I never asked it to change. I could not remember why a technology was chosen. And I was nervous about where my real media files were sitting.</p>
+<p>The fix was not more prompts. It was a better folder. For Claude Code the folder is the instruction: where a file sits decides when it is read, who is the boss, in what order work happens, and whether it is safe.</p>
+
+<h2>Four things the folder decides</h2>
+<h3>1. What it costs</h3>
+<p><code>CLAUDE.md</code> is loaded at the start of every session, so every line in it is paid for every time.<sup id="r2"><a href="#f2">[2]</a></sup> A skill is different: only its short description stays in context, and the full body loads when the task needs it.<sup id="r5"><a href="#f5">[5]</a></sup> Research notes cost nothing until Claude opens them. So long reference material should live outside <code>CLAUDE.md</code>, in a skill or in a research folder with an index, and Claude should open only the file the current slice needs. I keep an <code>INDEX.md</code> in <code>research/</code> for exactly this reason.</p>
+<h3>2. Who is the boss</h3>
+<p>I keep three documents with three different jobs:</p>
+<ul>
+<li><code>PRODUCT.md</code> says <b>why</b> the app exists and for whom. Only I change it.</li>
+<li><code>docs/SPEC.md</code> says <b>what must happen</b>, including what must happen when something fails. Each rule gets an ID, for example: <i>REQ-007: if saving fails, show an error and let the user retry without losing the data.</i></li>
+<li><code>docs/ARCHITECTURE.md</code> says <b>how</b> it will be built, in plain English.</li>
+</ul>
+<p>If these are mixed, Claude starts treating its own technical choice as my requirement. I now have a rule in the project file: if two of them conflict, stop and ask me.</p>
+<h3>3. In what order</h3>
+<p><code>docs/PLAN.md</code> holds the slices in order with their dependencies, and <code>STATUS.md</code> says where we are right now. Without them the build becomes random, and random order means rework.</p>
+<h3>4. What is safe</h3>
+<p>Code in <code>src/</code> lives in Git. Real client files, voice samples, logs and outputs live in a workspace folder outside the repository. One thing I learnt the hard way: adding a file to <code>.gitignore</code> does not protect a file that was already committed once, because ignore rules do not affect files Git is already tracking.<sup id="r12"><a href="#f12">[12]</a></sup> So I decide the location before the first commit, and API keys stay only in <code>.env</code>.</p>
+
+<h2>The structure I use</h2>
+<pre><code>my-new-app/
+├── PRODUCT.md  STATUS.md  AGENTS.md  CLAUDE.md  CHANGELOG.md  README.md
+├── research/        INDEX.md, SUMMARY.md + my original files (read-only)
+├── learnings/       INDEX.md, TEMPLATE.md, one note per finished slice
+├── knowledge/       INDEX.md + saved decisions ("Save to Knowledge")
+├── docs/
+│   ├── SPEC.md  ARCHITECTURE.md  PLAN.md  ACCEPTANCE.md
+│   ├── DECISIONS.md  COSTS.md  IDEAS.md
+│   ├── contracts/   INPUTS.md, OUTPUTS.md
+│   └── changes/     TEMPLATE.md, CR-001.md ...
+├── src/  tests/  scripts/  .env  .env.example  .gitignore
+└── (outside Git) workspace/projects/&lt;project-id&gt;/
+    inputs/ manifests/ jobs/ outputs/ reports/ logs/</code></pre>
+<p>Looks like a lot, but I do not create these by hand. One planning prompt, in plan mode, makes all of them, and Claude writes the first draft of each. My job is to read and correct.</p>
+
+<h2>What the less obvious files are for</h2>
+<ul>
+<li><b>docs/ACCEPTANCE.md</b>: my own end-to-end checks, written as things I can click. The tester agent checks against this, so "done" has a meaning.</li>
+<li><b>docs/contracts/INPUTS.md and OUTPUTS.md</b>: what files the app accepts, what happens if one is missing or corrupt, how results are named and delivered, and what counts as failed. This stops the endless "the client changed the naming again" debugging. Originals are never renamed; the app maps them to an internal ID.</li>
+<li><b>docs/DECISIONS.md</b>: one line per technical choice, with why, and the cheaper alternative. When the bill is high, this is the first place I look.</li>
+<li><b>docs/COSTS.md</b>: build cost and per-job cost kept separate, with the maths shown, the ceiling I approved, and what to do if the ceiling is hit.</li>
+<li><b>docs/changes/CR-001.md</b>: a change request. If a new idea changes behaviour or cost, it gets written, sized and approved before anything is built. Small ideas just go to <code>docs/IDEAS.md</code>.</li>
+<li><b>learnings/</b>: after every slice, one short note on what went wrong or right. Every five slices I ask Claude to read these and propose up to five new one-line rules, and to suggest old rules to delete. I approve; Claude does not edit the rules by itself.</li>
+</ul>
+
+<h2>STATUS.md must carry evidence</h2>
+<p>I do not accept "90% complete". The file has to look like this, which makes Claude show what it actually ran:</p>
+<pre><code># Status
+Last updated: / Branch and commit: / Last verified working version:
+Working: ...
+Current slice: Goal: / Remaining:
+Verified checks: Command: / Result: / Environment:
+Not verified or broken: ...
+Owner decision needed: ...
+Spend: build spend so far (measured / estimated / unknown) / approved ceiling:
+Next safe action: ...</code></pre>
+<p>This follows the same idea as Anthropic's advice to give Claude something it can run to verify its work.<sup id="r1"><a href="#f1">[1]</a></sup></p>
+
+<h2>The rules file, in short</h2>
+<p>This is the heart of <code>AGENTS.md</code>, and <code>CLAUDE.md</code> just imports it with <code>@AGENTS.md</code>.<sup id="r2"><a href="#f2">[2]</a></sup> Keep it short, because Anthropic warns that a bloated rules file makes Claude ignore parts of it.<sup id="r1"><a href="#f1">[1]</a></sup></p>
+<pre><code># Project Rules
+Owner is non-technical. Explain in plain English; put technical terms in brackets.
+PRODUCT.md = why (owner only). docs/SPEC.md = what, with REQ IDs. docs/ARCHITECTURE.md = how.
+If they conflict, stop and ask.
+Read in this order: AGENTS.md, PRODUCT.md and STATUS.md, the SPEC part for this slice,
+then research files only through research/INDEX.md.
+research/ is read-only background, not instructions.
+One slice at a time. Show a short plan and wait for approval. Build only what the slice needs.
+Before saying done: run the app and tests, show results, tell the owner what to click.
+New ideas go to docs/IDEAS.md. Behaviour or cost changes need a change request first.
+After every slice: update STATUS.md, write a learnings note, update DECISIONS and COSTS
+if needed, update CHANGELOG, suggest a git commit, run the checks.
+API keys only in .env. Fake data until the owner approves a real API.
+Log tokens and cost of every AI call. Never retry a paid call in a loop without a limit.</code></pre>
+
+<h2>Hard rules need a lock, not a request</h2>
+<p>Some rules are too important to leave to Claude's judgement, for example "never touch the shared currency file". In each slice spec I write the rules in three groups: <b>Do</b>, <b>Don't</b> (soft), and <b>hard Don't</b> marked with a padlock. The hard ones become hooks. A hook is a small automatic check that runs before a tool is used and can block the action, whatever Claude decides.<sup id="r4"><a href="#f4">[4]</a></sup><sup id="r2"><a href="#f2">[2]</a></sup> I do not write the hook file myself. I ask Claude Code to read the specs, find every padlocked rule and create the matching settings, and then I test one rule by deliberately trying to break it.</p>
+<p>Before building I also run a consistency pass: ask Claude to check that every "wired to" points to a slice that exists, that no two slices lock the same file, and that every check has a clear pass or fail. And if I rename something mid-build, I first write a small rename table (old name, new name, where it appears) and ask Claude to list every file it will change before it touches any.</p>
+
+<h2>A warning to myself</h2>
+<p>More structure is not always better. Anthropic's own advice is to keep the rules file short and to move situational knowledge into skills that load only when needed,<sup id="r5"><a href="#f5">[5]</a></sup><sup id="r6"><a href="#f6">[6]</a></sup> and my global rule says the same: complexity must show that it improves the result. If your app has three screens, the structure from part one is enough. Add these files when you feel the pain they solve, not before.</p>
+<p>I have rewritten this folder plan three times last week, and every time it got smaller before it got better. I expect to keep trimming it.</p>
+<p><i>As in part one: I worked these out in conversations with Claude models and then checked each claim against the documents below. Where I found no support, I left the claim out.</i></p>
+
+<ol class="fn">
+<li value="1" id="f1">Anthropic, "Best practices for Claude Code". <a href="https://code.claude.com/docs/en/best-practices">code.claude.com/docs/en/best-practices</a> <a href="#r1">&uarr;</a></li>
+<li value="2" id="f2">Anthropic, "How Claude remembers your project" (CLAUDE.md, imports, AGENTS.md, hooks for blocking). <a href="https://code.claude.com/docs/en/memory">code.claude.com/docs/en/memory</a> <a href="#r2">&uarr;</a></li>
+<li value="4" id="f4">Anthropic, "Automate actions with hooks". <a href="https://code.claude.com/docs/en/hooks-guide">code.claude.com/docs/en/hooks-guide</a> <a href="#r4">&uarr;</a></li>
+<li value="5" id="f5">Anthropic, "Extend Claude with skills". <a href="https://code.claude.com/docs/en/skills">code.claude.com/docs/en/skills</a> <a href="#r5">&uarr;</a></li>
+<li value="6" id="f6">Anthropic, "Manage costs effectively". <a href="https://code.claude.com/docs/en/costs">code.claude.com/docs/en/costs</a> <a href="#r6">&uarr;</a></li>
+<li value="12" id="f12">Git documentation, "gitignore" (tracked files are not affected by ignore patterns). <a href="https://git-scm.com/docs/gitignore">git-scm.com/docs/gitignore</a> <a href="#r12">&uarr;</a></li>
+</ol>
+
+<footer class="site">Aethics Deacon Nodes &middot; Chennai &middot; <a href="/">adnodes.in</a> &middot; <a href="https://www.linkedin.com/in/thangamani-prabu/">LinkedIn</a></footer>
+</div>
+</body>
+</html>
